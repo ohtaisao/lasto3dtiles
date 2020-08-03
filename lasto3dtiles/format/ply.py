@@ -19,9 +19,9 @@ class PlyFile():
 
     def voxel_down_sample(self, voxel_size=0.1):
         old_obj = self.obj
-        self.obj.voxel_down_sample(voxel_size=voxel_size)
+        downpcd = self.obj.voxel_down_sample(voxel_size=voxel_size)
         del old_obj
-        return self.obj
+        return downpcd
 
     def save(self, filename):
         return dump(self.obj, filename)
